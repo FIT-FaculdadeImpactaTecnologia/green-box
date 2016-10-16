@@ -1,0 +1,6 @@
+node_modules
+resources/vendor
+public/assets/js/env.js
+.settings/
+.buildpath
+.project
