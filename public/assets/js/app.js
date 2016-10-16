@@ -1,8 +1,4 @@
 var $box = angular.module('box', [ 'ui.router', 'ngMaterial' ])
-
-.controller('AppCtrl', function($scope) {
-  $scope.imagePath = 'https://material.angularjs.org/latest/img/washedout.png';
-});
 function config($stateProvider, $urlRouterProvider, $httpProvider, $provide, $locationProvider) {
     $locationProvider.html5Mode(true);
 }
@@ -28,10 +24,22 @@ $box.config(['$stateProvider',
 	function($stateProvider) {
 
 	$stateProvider
+    .state('grid', {
+        url: "/grid",
+        templateUrl: "views/grid.html"
+    });
 
-        .state('grid', {
-            url: "/grid",
-            templateUrl: "views/grid.html"
-        });
+    $stateProvider
+    .state('description', {
+        url: "/description",
+        templateUrl: "views/description.html"
+    });
+
+    $stateProvider
+    .state('status', {
+        url: "/status",
+        templateUrl: "views/status.html"
+    });
+
 }]);
 //# sourceMappingURL=app.js.map
